@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1><u>Formulário da Faculdade</u></h1>
+            <h2>Complete o Formulário</h2>
+        </header> 
+       <form action="cadastrofaculdade.php" method="post">
+        <p class="data">
+            Data do Preenchimento:
+            <label for="idia"></label>
+            <input type="date" name="dia" id="idia" value="2024-08-30">
+            <label for="ihora">Horário: </label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome :</label>
+                <input type="text" name="nome" id="inome" required minlength="3" maxlength="15" size="10"
+                 placeholder="Nome" autocomplete="name">
+                 <label for="isobre"><span class="sobre">Sobrenome</span>: </label>
+                 <input type="text" name="sobre" id="isobre" minlength="3" maxlength="25" size="15" placeholder="Sobrenome"
+                  autocomplete="family-name" required>
+            </p>
+            <p>
+                Sexo:
+                <input type="radio" name="sexo" id="isemasc"> <label for="isemasc">Masculino</label>
+                <input type="radio" name="sexo" id="isefem"> <label for="isefem">Feminino</label>
+            </p>
+            <p>
+                <label for="ida">Idade: </label>
+                <input type="range" name="ida" id="ida" min="0" max="100" value="0"
+                oninput="ival.innerHTML = Number(ida.value)" required>
+                <output id="ival">0</output>
+                <label for="isen"><span class="senha">Senha</span> :</label>
+                <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" size="15"
+                 placeholder="senha da faculdade" autocomplete="current-password">
+            </p>
+            <p>
+                <label for="iemail">E-mail: </label>
+                <input type="email" name="email" id="iemail" required size="25" placeholder="E-mail" autocomplete="email">
+                <label for="itel"><span class="telefone">Telefone</span>:</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel"
+                 required pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$" placeholder="(xx)xxxxx-xxxx">
+            </p>
+            <p>
+                <label for="iend">Endereço: </label>
+                <input type="text" name="end" id="iend" required min="5" max="25" size="25" placeholder="Endereço" autocomplete="home">
+                <label for="inum"><span class="numero">Número</span>: </label>
+                <input type="number" name="num" id="inum" required min="0">
+            </p>
+            <p>
+                <label for="ibai"><span class="bairro">Bairro</span>: </label>
+                <input type="text" name="bai" id="ibai" required min="5" max="25"  placeholder="Bairro" autocomplete="home">
+                <label for="imun"><span class="muni"><span class="mun">Município</span>: </label>
+                <input type="text" name="mun" id="imun" required min="5" max="25"  placeholder="Município" autocomplete="home">
+            </p>
+            <p>
+                <label for="icep">CEP: </label>
+                <input type="text" name="cep" id="icep" required pattern="^\d{8}$" placeholder="CEP" autocomplete="home"
+                 minlength="8" maxlength="8">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Perguntas</legend>
+            <p>
+                <label for="iprof">Profissão</label>
+         <input type="text" name="prof" id="iprof" list="listprof" required>
+         <datalist id="listprof">
+        <option >Engenheiro</option>
+        <option>Médico</option>
+        <option>Professor</option>
+        <option>Advogado</option>
+        <option>Programador</option>
+        <option>Designer</option>
+        <option>Enfermeiro</option>
+        <option>Arquiteto</option>
+        <option>Analista</option>
+        <option>Psicólogo</option>
+        <option>Contador</option>
+        <option>Farmacêutico</option>
+        <option>Dentista</option>
+        <option>Jornalista</option>
+        <option>Veterinário</option>
+        <option>Chef de cozinha</option>
+        <option>Piloto</option>
+        <option>Economista</option>
+        <option>Fotógrafo</option>
+        <option>Analista de Dados</option>
+        <option>Gerente</option>
+         </datalist>
+         <label for="icor"><span class="cor">Cor Favorita</span>: </label>
+        <input type="color" name="cor" id="icor" value="#00ff00" required>
+            </p>
+            <p><h3 class="esportes">Escolha seus Esportes Favoritos:</h3></p>
+            <p>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Futebol"> Futebol
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Basquete"> Basquete
+                        </label>
+                    </li>
+                        <li>
+                            <label>
+                            <input type="checkbox" name="esporte" value="Vôlei"> Vôlei
+                            </label>
+                        </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Tênis"> Tênis
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Natação"> Natação
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Atletismo"> Atletismo
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Surfe"> Surfe
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Ginástica"> Ginástica
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Ciclismo"> Ciclismo
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="esporte" value="Boxe"> Boxe
+                        </label>
+                    </li>
+                </ul>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Observações</legend>
+            <p>
+                <label for="iarqui">Quer nos enviar algo, fique à vontade: </label>
+                <input type="file" name="arqui" id="iarqui">
+            </p>
+            <p>
+                <label for="imsg">Conte-nos mais sobre o que desejar: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+            <p>
+                <input type="submit" value="ENVIAR" class="envio">
+                <input type="reset" value="LIMPAR" class="reset">
+            </p>
+       </form>
+
+
+    </main>
+</body>
+</html>

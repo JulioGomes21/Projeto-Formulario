@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    text-align: center;
+}
+body {
+    background-image: linear-gradient(to right, #818274, #a3ab78);
+}
+main {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(76, 93, 104, 0.596);
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+    font-size: 1.05em;
+}
+p.data {
+    text-align: center;
+}
+input {
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 5px;
+}
+span.sobre{
+    margin-left: 60px;
+}
+input#isemasc{
+    margin-left: 50px;
+}
+input#isefem{
+    margin-left: 50px;
+}
+output#ival {
+    background-color: #bab9b6;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    display: inline-block;
+}
+span.senha {
+    margin-left: 50px;
+}
+input#inum {
+    width: 40px;
+}
+span.telefone {
+    margin-left: 30px;
+}
+span.numero {
+    margin-left: 50px;
+}
+span.muni {
+    margin-left: 1px;
+}
+span.bairro {
+    width: 80px;
+}
+span.mun {
+    width: 80px;
+    margin-left: 50px;
+}
+ul {
+    columns: 2;
+}
+span.cor {
+    margin-left: 60px;
+}
+datalist {
+    width: 100px;
+    height: 50px;
+}
+h3.esportes {
+    text-align: left;
+}
+textarea {
+    width: 560px;
+}
+input.envio {
+    margin-left: 175px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: green;
+}
+input.reset {
+    margin-left: 50px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(255, 50, 50);
+}
+input.envio:hover {
+    background-color: rgb(34, 237, 34);
+}
+input.reset:hover {
+    background-color: rgb(129, 0, 0);
+}
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: #d9dcc3;
+}
+fieldset {
+    margin-bottom: 25px;
+    background-color: rgb(182, 196, 196);
+    border-radius: 5px;
+}
